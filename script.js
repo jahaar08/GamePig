@@ -13,7 +13,7 @@ score0El.textContent = 0;
 score1El.textContent = 0;
 diceEl.classList.add("hidden");
 
-let current = document.getElementById("current--0");
+let current = 0;
 
 //Rolling dice functionality
 btnRoll.addEventListener("click", function () {
@@ -28,7 +28,9 @@ btnRoll.addEventListener("click", function () {
   //3. Check for rolled 1
   if (dice !== 1) {
     // Add dice to current score
-    current = dice;
+    current += dice;
+    document.getElementById("current--0").textContent = current;
   } else {
+    // Switch to the next player
   }
 });
